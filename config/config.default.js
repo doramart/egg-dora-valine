@@ -13,10 +13,10 @@ exports.doraValine = {
     enName: 'doraValine', // 插件名
     name: 'valine评论', // 插件名称
     description: 'valine评论', // 插件描述
-    isadm: 1, // 是否有后台管理，1：有，0：没有，入口地址:'/ext/devteam/admin/index'
-    isindex: 0, // 是否需要前台访问，1：需要，0：不需要,入口地址:'/ext/devteam/index/index'
+    isadm: 1, // 是否有后台管理，1：有，0：没有
+    isindex: 1, // 是否需要前台展示，1：需要，0：不需要
     version: pkgInfo.version, // 版本号
-    iconName: 'icon_service', // 主菜单图标名称
+    iconName: 'icon_comments', // 主菜单图标名称
     adminUrl: '/valine/js/app.js',
     adminApi: [{
         url: 'valine/getList',
