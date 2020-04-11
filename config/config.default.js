@@ -13,10 +13,10 @@ exports.doraValine = {
     enName: 'doraValine', // 插件名
     name: 'valine评论', // 插件名称
     description: 'valine评论', // 插件描述
-    isadm: 1, // 是否有后台管理，1：有，0：没有，入口地址:'/ext/devteam/admin/index'
-    isindex: 0, // 是否需要前台访问，1：需要，0：不需要,入口地址:'/ext/devteam/index/index'
+    isadm: 1, // 是否有后台管理，1：有，0：没有
+    isindex: 1, // 是否需要前台展示，1：需要，0：不需要
     version: pkgInfo.version, // 版本号
-    iconName: 'icon_service', // 主菜单图标名称
+    iconName: 'icon_comments', // 主菜单图标名称
     adminUrl: '/valine/js/app.js',
     adminApi: [{
         url: 'valine/getList',
@@ -41,11 +41,10 @@ exports.doraValine = {
         details: '获取渲染html数据',
     }],
     initData: '', // 初始化数据脚本
-    hooks: ['documentDetailAfter'], // 挂载的钩子，数组格式，如['hooks1', 'hooks2'],不挂载留空：[]
+    hooks: ['messageBoard'], // 挂载的钩子，数组格式，如['hooks1', 'hooks2'],不挂载留空：[]
     pluginsConfig: ` 
     exports.doraValine = {\n
-        enable: true,\n
-         \n
+        enable: true,\n        package: 'egg-dora-valine',\n
     };\n
     `, // 插入到 plugins.js 中的配置
     defaultConfig: `

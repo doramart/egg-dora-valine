@@ -34,11 +34,13 @@ let ValineController = {
                     appKey,
                     placeholder
                 } = valineList[0];
-                tempStr = nunjucks.render(targetTempPath, {
-                    appID,
-                    appKey,
-                    placeholder
-                });
+                if (appID && appKey && placeholder) {
+                    tempStr = nunjucks.render(targetTempPath, {
+                        appID,
+                        appKey,
+                        placeholder
+                    });
+                }
             }
 
             ctx.helper.renderSuccess(ctx, {
